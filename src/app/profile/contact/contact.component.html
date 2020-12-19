@@ -13,28 +13,27 @@
                             <div>
                                 <mat-form-field style="margin-left: 10px;" fxFlex="100">
                                     <mat-label>Name</mat-label>
-                                    <input type="text" matInput formControlName="name" [errorStateMatcher]="matcher" autocomplete="off">
-                                    <mat-error *ngIf="customerForm.get('name').hasError('required')">Name is required</mat-error>
+                                    <input type="text" matInput formControlName="name" placeholder="Enter your name" autocomplete="off">
                                 </mat-form-field>
                             </div>
                             <div>
                                 <mat-form-field style="margin-left: 10px;" fxFlex="100">
                                     <mat-label>Subject</mat-label>
-                                    <input type="text" matInput formControlName="subject" [errorStateMatcher]="matcher" autocomplete="off">
+                                    <input type="text" matInput formControlName="subject" [errorStateMatcher]="matcher" placeholder="Enter subject" autocomplete="off" required>
                                     <mat-error *ngIf="customerForm.get('subject').hasError('required')">Subject is required</mat-error>
                                 </mat-form-field>
                             </div>
                             <div>
                                 <mat-form-field style="margin-left: 10px;" fxFlex="100">
                                     <mat-label>Email</mat-label>
-                                    <input type="text" matInput formControlName="email" [errorStateMatcher]="matcher" autocomplete="off">
+                                    <input type="text" matInput formControlName="email" [errorStateMatcher]="matcher"  placeholder="Enter your mail address" autocomplete="off" required>
                                     <mat-error *ngIf="customerForm.get('email').hasError('required')">Email is required</mat-error>
                                 </mat-form-field>
                             </div>
                             <div>
                                 <mat-form-field style="margin-left: 10px;" fxFlex="100">
                                     <mat-label>Message</mat-label>
-                                    <input type="text" matInput formControlName="message" [errorStateMatcher]="matcher" autocomplete="off">
+                                    <textarea  type="text" matInput formControlName="message" [errorStateMatcher]="matcher" placeholder="Enter your message" autocomplete="off" required></textarea>
                                     <mat-error *ngIf="customerForm.get('message').hasError('required')">Message is required</mat-error>
                                 </mat-form-field>
                             </div>
